@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./base.css">
+    
+    <script type="module" src="./canvas-gl.js"></script>
+
+
+  </head>
+  <body>
+    <div id="root">
+      <!-- <canvas id="canvas3d"></canvas> -->
+      <!-- <canvas-gl id="canvas3d"></canvas-gl> -->
+      <canvas is="canvas-gl" width="500" height="300" id="aaacanvas3d" src="NFT_ourealy_ourealy.png" shader="
+      void main() {
+        vec2 uv = gl_FragCoord.xy / u_resolution;
+        outColor = texture(u_image, v_texCoord);
+      }
+      "></canvas>
+      
+      <canvas is="canvas-gl" width="500" height="300" id="aaacanvas3d" sdfsdfsrc="GFd9c7oa0AAyPAI.jpeg" shader="
+      void main() {
+        vec2 uv = gl_FragCoord.xy / u_resolution;
+        outColor = vec4( v_texCoord, 0,1);
+      }
+      "></canvas>
+
+    </div>
+    <script type="module">
+    
+      import { init } from './main.js';
+      // import { CanvasGL } from './canvas-gl.js';
+      // document.onload = () => {
+      // 
+      // }
+      
+      const _canvas = document.querySelector("#canvas3d");
+      // debugger
+      // console.log(_canvas);
+      // if(_canvas) init({canvas:_canvas});
+      // if(_canvas) {
+      //     var image = new Image();
+      //     image.src = "GFd9c7oa0AAyPAI.jpeg";  // MUST BE SAME DOMAIN!!!
+      //     image.onload = function() {
+      //       // render(image);
+      //       init(_canvas, image);
+      //     }
+      // }
+    
+    </script>
+  </body>
+</html>
